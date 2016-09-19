@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="7"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= h(article.name) %></td>
+        <td><%= h(article.owner.name) %></td>
+        <td><%= h(article.price) %></td>
+        <td><%= h(article.description) %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %> |
+<%= link_to 'JSON API', @owner.nil? ? articles_path(format: :json) :
+    owner_articles_path(@owner.name, format: :json) %> |
+<%= link_to 'Home', root_path %>

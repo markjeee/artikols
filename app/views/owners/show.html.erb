@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<p>Name: <%= h(@owner.name) %></p>
+<p>Full name: <%= h(@owner.fullname) %></p>
+
+<%= link_to 'Edit', edit_owner_path(@owner) %> |
+<%= link_to 'Back', owners_path %> |
+<%= link_to 'JSON API', owner_page_path(@owner.name, format: :json) %>

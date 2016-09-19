@@ -1,0 +1,27 @@
+<%= form_for(owner) do |f| %>
+  <% if owner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
+
+      <ul>
+      <% owner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<p>
+  <%= label_tag(:name, 'Name: ') %><br />
+  <%= f.text_field(:name) %>
+</p>
+
+<p>
+  <%= label_tag(:fullname, 'Full name: ') %><br />
+  <%= f.text_field(:fullname) %>
+</p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

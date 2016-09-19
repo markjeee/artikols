@@ -1,0 +1,35 @@
+<h1>Hello!!!</h1>
+
+<p>Welcome, and thank you for visiting this owner/article demo app.</p>
+
+<h2>How to use?</h2>
+
+<p>Use any of the links below:</p>
+
+<ul>
+  <li>
+    <%= link_to('Articles', articles_path) %>,
+    in <%= link_to('JSON API', articles_path(format: :json)) %>
+  </li>
+  <li>
+    <%= link_to('Owners', owners_path) %>
+    in <%= link_to('JSON API', owners_path(format: :json)) %>
+  </li>
+  <li>
+    <%= link_to('Article detail (#1)', article_path(Article.find(1))) %>,
+    in <%= link_to('JSON API', article_path(Article.find(1), format: :json)) %>
+  </li>
+  <li>
+    <%= link_to('Owner info (alex)', owner_page_path('alex')) %>,
+    in <%= link_to('JSON API', owner_page_path('alex', format: :json)) %>
+  </li>
+  <li>
+    <%= link_to('Articles by user (matz)', owner_articles_path('matz')) %>,
+    in <%= link_to('JSON API', owner_articles_path('matz', format: :json)) %>
+  </li>
+</ul>
+
+<h2>Editing data</h2>
+
+<p>This is a fully working scaffold demo, so you can edit, and insert
+  data as needed.</p>
