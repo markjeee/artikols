@@ -20,3 +20,13 @@ Then visit: http://127.0.0.1:3000
 This is now running Heroku:
 
     http://markjeee-artikols.herokuapp.com
+
+# Excerise 01
+
+You can find the implementation for Exercise #1 at:
+
+    lib/my_array_map.rb
+
+And also, a running test at:
+
+    test/units/exercise01_test.rb
